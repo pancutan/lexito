@@ -6,6 +6,16 @@ es:
           attributes:
             password:
               too_short: " - Contraseña muy corta"
+            current_password:
+              blank: " - Debe suministrar un password"
+        expedient:
+          attributes:
+            numero:
+              taken: " - Ya existe un expediente con ese número"
+              blank: " - Debe suministrar un número de expediente"
+            caratula:
+              taken: " - Ya existe una expediente con esa carátula"
+              blank: " - Debe suministrar una carátula para darle nombre a este expediente"
   botonera:
     main: "Principal"
     edit: "Editar perfil"
