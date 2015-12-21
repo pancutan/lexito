@@ -1,1 +1,16 @@
 es:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              too_short: " - Contraseña muy corta"
+  botonera:
+    main: "Principal"
+    edit: "Editar perfil"
+    signout: "Salir"
+    signin: "Entrar"
+    signup: "Inscribirse"
+    about: "Acerca de"
+    users: "Usuarios"
