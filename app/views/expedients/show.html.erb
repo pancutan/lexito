@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Número:</strong>
+  <%= @expedient.numero %>
+</p>
+
+<p>
+  <strong>Carátula:</strong>
+  <%= @expedient.caratula %>
+</p>
+
+<%= link_to 'Editar', edit_expedient_path(@expedient) %> |
+<%= link_to 'Volver', expedients_path %>

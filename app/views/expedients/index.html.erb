@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Expedientes</h1>
+<p>
+<%= link_to 'Nuevo expediente', new_expedient_path %>
+</p>
+
+<div class="container">
+  <%#<h2>Striped Rows</h2>%>
+  <table class="table table-striped">
+
+    <thead>
+      <tr>
+        <th>Número</th>
+        <th>Carátula</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <% @expedients.each do |expedient| %>
+      <tr>
+      <td><%= expedient.numero %></td>
+      <td><%= expedient.caratula %></td>
+      <td><%= link_to 'Mostrar', expedient %></td>
+      <td><%= link_to 'Editar', edit_expedient_path(expedient) %></td>
+      <td><%= link_to 'Borrar', expedient, method: :delete, data: { confirm: '¿Está seguro?' } %></td>
+    </tr>
+  <% end %>
+    </tbody>
+  </table>
+</div>
+

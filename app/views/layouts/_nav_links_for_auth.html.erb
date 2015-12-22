@@ -1,8 +1,10 @@
 <% if user_signed_in? %>
+  <li><%= link_to t('botonera.users'), users_path %></li>
+  <li><%= link_to ('Expedientes'), expedients_path %></li>
   <li><%= link_to t('botonera.edit'), edit_user_registration_path %></li>
+  <li><%= link_to t('botonera.about'), page_path('about') %></li>
   <li><%= link_to t('botonera.signout'), destroy_user_session_path, :method=>'delete' %></li>
 <% else %>
   <li><%= link_to t('botonera.signin'), new_user_session_path %></li>
   <li><%= link_to t('botonera.signup'), new_user_registration_path %></li>
 <% end %>
-

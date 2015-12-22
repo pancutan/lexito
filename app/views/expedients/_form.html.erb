@@ -1,0 +1,25 @@
+<%= form_for(@expedient) do |f| %>
+  <% if @expedient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@expedient.errors.count, "error") %> prohibited this expedient from being saved:</h2>
+
+      <ul>
+      <% @expedient.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :numero, 'Número' %><br>
+    <%= f.number_field :numero %>
+  </div>
+  <div class="field">
+    <%= f.label :caratula, 'Carátula' %><br>
+    <%= f.text_field :caratula %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Aceptar' %>
+  </div>
+<% end %>
