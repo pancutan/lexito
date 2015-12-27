@@ -1,6 +1,6 @@
 class ExpedientsController < ApplicationController
   before_action :set_expedient, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /expedients
   # GET /expedients.json
   def index

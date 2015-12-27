@@ -1,4 +1,15 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"> <%#= notice %> </p> -->
+<p></p>
+
+<p>
+  <strong>Expediente creado el:</strong>:
+  <%= @expedient.created_at  %>
+</p>
+
+<p><strong>Última modificación</strong>
+  <%= @expedient.updated_at  %>
+</p>
+
 
 <p>
   <strong>Numero:</strong>
@@ -105,5 +116,5 @@
   <%= @expedient.indenmizacion %>
 </p>
 
-<%= link_to 'Edit', edit_expedient_path(@expedient) %> |
-<%= link_to 'Back', expedients_path %>
+<%= link_to 'Editar', edit_expedient_path(@expedient) %> |
+<%= link_to 'Volver', expedients_path %>

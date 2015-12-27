@@ -14,12 +14,26 @@ es:
               blank: " - Debe suministrar un password"
         expedient:
           attributes:
+            demandado:
+              blank: " - Debe suministrar algo en el campo actor"
+            actor:
+              blank: " - Debe suministrar algo en el campo actor"
             numero:
               taken: " - Ya existe un expediente con ese número"
               blank: " - Debe suministrar un número de expediente"
             caratula:
               taken: " - Ya existe una expediente con esa carátula"
               blank: " - Debe suministrar una carátula para darle nombre a este expediente"
+            ibm:
+              not_a_number: "IBM debe ser un valor numerico"
+            numero:
+              not_a_number: "Numero debe ser un valor numerico"
+            perito_psicologico_incapacidad:
+              not_a_number: "La incapacidad dictaminada por el perito psicologico debe poseer un valor numerico"
+            perito_medico_incapacidad:
+              not_a_number: "La incapacidad dictaminada por el perito medico debe poseer un valor numerico"
+            perito_contable_incapacidad:
+              not_a_number: "La incapacidad dictaminada por el perito contable debe poseer un valor numerico"
   botonera:
     main: "Principal"
     edit: "Editar perfil"
