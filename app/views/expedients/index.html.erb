@@ -1,33 +1,44 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to '[:: Nuevo expediente ::]', new_expedient_path %>
+
 <h1>Expedientes</h1>
-<p>
-<%= link_to 'Nuevo expediente', new_expedient_path %>
-</p>
 
 <div class="container">
-  <%#<h2>Striped Rows</h2>%>
-  <table class="table table-striped">
+  <div class="row">
+    <h3>Users</h3>
+    <div class="column">
+      <table class="table">
 
-    <thead>
-      <tr>
-        <th>Número</th>
-        <th>Carátula</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
+        <thead>
+          <tr>
+            <th>Número</th>
+            <th>Carátula</th>
+            <th>Actor</th>
+            <th>Demandado</th>
+            <th colspan="2"></th>
+          </tr>
+        </thead>
 
-    <tbody>
-    <% @expedients.each do |expedient| %>
-      <tr>
-      <td><%= expedient.numero %></td>
-      <td><%= expedient.caratula %></td>
-      <td><%= link_to 'Mostrar', expedient %></td>
-      <td><%= link_to 'Editar', edit_expedient_path(expedient) %></td>
-      <td><%= link_to 'Borrar', expedient, method: :delete, data: { confirm: '¿Está seguro?' } %></td>
-    </tr>
-  <% end %>
-    </tbody>
-  </table>
+        <tbody>
+        <% @expedients.each do |expedient| %>
+          <tr>
+          <td><%= expedient.numero %></td>
+          <td><%= expedient.caratula %></td>
+          <td><%= expedient.actor %></td>
+          <td><%= expedient.demandado %></td>
+          <td><%= link_to 'Edit', edit_expedient_path(expedient) %></td>
+          <td><%= link_to 'Destroy', expedient, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
+        </tr>
+      <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
+
+</table>
+
+<br>
+
 

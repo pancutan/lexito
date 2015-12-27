@@ -18,7 +18,7 @@ class ExpedientsControllerTest < ActionController::TestCase
 
   test "should create expedient" do
     assert_difference('Expedient.count') do
-      post :create, expedient: { caratula: @expedient.caratula, numero: @expedient.numero }
+      post :create, expedient: { abogado: @expedient.abogado, actor: @expedient.actor, caratula: @expedient.caratula, demandado: @expedient.demandado, email_abogado: @expedient.email_abogado, ibm: @expedient.ibm, indenmizacion: @expedient.indenmizacion, numero: @expedient.numero, perito_contable: @expedient.perito_contable, perito_contable_email: @expedient.perito_contable_email, perito_contable_incapacidad: @expedient.perito_contable_incapacidad, perito_contable_telefono: @expedient.perito_contable_telefono, perito_medico: @expedient.perito_medico, perito_medico_email: @expedient.perito_medico_email, perito_medico_incapacidad: @expedient.perito_medico_incapacidad, perito_medico_telefono: @expedient.perito_medico_telefono, perito_psicologico: @expedient.perito_psicologico, perito_psicologico_email: @expedient.perito_psicologico_email, perito_psicologico_incapacidad: @expedient.perito_psicologico_incapacidad, perito_psicologico_telefono: @expedient.perito_psicologico_telefono, telefono_abogado: @expedient.telefono_abogado }
     end
 
     assert_redirected_to expedient_path(assigns(:expedient))
@@ -35,7 +35,7 @@ class ExpedientsControllerTest < ActionController::TestCase
   end
 
   test "should update expedient" do
-    patch :update, id: @expedient, expedient: { caratula: @expedient.caratula, numero: @expedient.numero }
+    patch :update, id: @expedient, expedient: { abogado: @expedient.abogado, actor: @expedient.actor, caratula: @expedient.caratula, demandado: @expedient.demandado, email_abogado: @expedient.email_abogado, ibm: @expedient.ibm, indenmizacion: @expedient.indenmizacion, numero: @expedient.numero, perito_contable: @expedient.perito_contable, perito_contable_email: @expedient.perito_contable_email, perito_contable_incapacidad: @expedient.perito_contable_incapacidad, perito_contable_telefono: @expedient.perito_contable_telefono, perito_medico: @expedient.perito_medico, perito_medico_email: @expedient.perito_medico_email, perito_medico_incapacidad: @expedient.perito_medico_incapacidad, perito_medico_telefono: @expedient.perito_medico_telefono, perito_psicologico: @expedient.perito_psicologico, perito_psicologico_email: @expedient.perito_psicologico_email, perito_psicologico_incapacidad: @expedient.perito_psicologico_incapacidad, perito_psicologico_telefono: @expedient.perito_psicologico_telefono, telefono_abogado: @expedient.telefono_abogado }
     assert_redirected_to expedient_path(assigns(:expedient))
   end
 

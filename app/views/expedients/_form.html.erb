@@ -1,25 +1,653 @@
+<br />
 <%= form_for(@expedient) do |f| %>
   <% if @expedient.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@expedient.errors.count, "error") %> prohibited this expedient from being saved:</h2>
+  <div id="error_explanation">
+  <h2><%= pluralize(@expedient.errors.count, "error") %> no permiten guardar este expediente:</h2>
 
-      <ul>
-      <% @expedient.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+  <ul>
+    <% @expedient.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+  <% end %>
+  </ul>
+</div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :numero, 'Número' %><br>
-    <%= f.number_field :numero %>
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-1 col-xs-4">
+    </div>
+
+    <div class="col-md-5 col-xs-8">
+    </div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-1 col-xs-4">
+    </div>
+
+    <div class="col-md-5 col-xs-8">
+      <!-- <strong>Peritos</strong> -->
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :caratula, 'Carátula' %><br>
-    <%= f.text_field :caratula %>
+
+  <div class="row">
+    <div class="col-md-1 col-xs-4">&nbsp;
+    </div>
+
+    <div class="col-md-5 col-xs-8">
+    </div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-1 col-xs-4">
+    </div>
+
+    <div class="col-md-5 col-xs-8">
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit 'Aceptar' %>
+
+  <div class="row">
+    <div class="col-md-1 col-xs-5">
+      <%= f.label :numero, 'Número' %>
+    </div>
+    <div class="col-md-1 col-xs-7">
+      <%= f.text_field :numero, :size => '10'%>
+    </div>
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-1 col-xs-5">
+      <%= f.label :demandado, 'Demandado' %>
+    </div>
+
+    <div class="col-md-1 col-xs-7">
+      <%= f.text_field :demandado, :size => '20' %>
+    </div>
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-2 col-xs-5">
+      <%= f.label :perito_medico, 'Perito Médico' %>
+    </div>
+
+    <div class="col-md-1 col-xs-7">
+      <%= f.text_field :perito_medico %>
+    </div>
+
   </div>
+
+  <div class="row">
+    <div class="col-md-1 col-xs-5">
+      <%= f.label :caratula, 'Carátula' %>
+    </div>
+    <div class="col-md-1 col-xs-7">
+      <%= f.text_field :caratula, :size => '20' %>
+    </div>
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-1 col-xs-5">
+      <%= f.label :abogado, 'Abogado' %>
+    </div>
+
+    <div class="col-md-1 col-xs-7">
+      <%= f.text_field :abogado %><br>
+    </div>
+
+    <div class="col-md-1"></div>
+
+    <div class="col-md-2 col-xs-5">
+      <%= f.label :perito_medico_email, 'E-mail' %>
+    </div>
+
+    <div class="col-md-1 col-xs-7">
+      <%= f.text_field :perito_medico_email %>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-1 col-xs-5">
+      <%= f.label :actor, 'Actor' %>
+    </div>
+    <div class="col-md-1 col-xs-7">
+      <%= f.text_field :actor, :size => '20'  %>
+    </div>
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-1 col-xs-5">
+      <%= f.label :telefono_abogado, 'Teléfono' %>
+    </div>
+
+    <div class="col-md-1 col-xs-7">
+      <%= f.text_field :telefono_abogado %><br>
+    </div>
+
+    <div class="col-md-1">
+    </div>
+
+    <div class="col-md-2 col-xs-5">
+      <%= f.label :perito_medico_telefono, 'Teléfono' %>
+    </div>
+
+    <div class="col-md-1 col-xs-7">
+      <%= f.text_field :perito_medico_telefono %>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+    <div class="col-md-1 col-xs-7">
+    </div>
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-1 col-xs-5">
+      <%= f.label :email_abogado, 'E-mail' %>
+    </div>
+
+    <div class="col-md-1 col-xs-7">
+      <%= f.text_field :email_abogado %>
+    </div>
+
+    <div class="col-md-1">
+    </div>
+
+    <div class="col-md-2 col-xs-5">
+      <%= f.label :perito_medico_incapacidad, '% Incapac' %>
+    </div>
+
+    <div class="col-md-1 col-xs-7">
+      <%= f.text_field :perito_medico_incapacidad, :size => '2' %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1 col-xs-4">&nbsp;
+    </div>
+
+    <div class="col-md-5 col-xs-8">
+    </div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-1 col-xs-4">
+    </div>
+
+    <div class="col-md-5 col-xs-8">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-2 col-xs-5">
+      <%= f.label :perito_psicologico, 'Psicologo' %>
+    </div>
+
+    <div class="col-md-1 col-xs-7">
+      <%= f.text_field :perito_psicologico %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-2 col-xs-5">
+      <%= f.label :perito_psicologico_email, 'E-mail' %>
+    </div>
+
+    <div class="col-md-1 col-xs-7">
+      <%= f.text_field :perito_psicologico_email %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-2 col-xs-5">
+      <%= f.label :perito_psicologico_telefono, 'Teléfono' %>
+    </div>
+
+    <div class="col-md-1 col-xs-7">
+      <%= f.text_field :perito_psicologico_telefono %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-2 col-xs-5">
+      <%= f.label :perito_psicologico_incapacidad, '% Incapac' %>
+    </div>
+
+    <div class="col-md-1 col-xs-7">
+      <%= f.text_field :perito_psicologico_incapacidad, :size => '2'  %>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-1 col-xs-4">&nbsp;
+    </div>
+
+    <div class="col-md-5 col-xs-8">
+    </div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-1 col-xs-4">
+    </div>
+
+    <div class="col-md-5 col-xs-8">
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-2 col-xs-5">
+      <%= f.label :perito_contable, 'Contable' %>
+    </div>
+
+    <div class="col-md-1 col-xs-7">
+      <%= f.text_field :perito_contable %>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-2 col-xs-5">
+      <%= f.label :perito_contable_email, 'E-mail' %>
+    </div>
+
+    <div class="col-md-1 col-xs-7">
+      <%= f.text_field :perito_contable_email %>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-2 col-xs-5">
+      <%= f.label :perito_contable_telefono, 'Teléfono' %>
+    </div>
+
+    <div class="col-md-1 col-xs-7">
+      <%= f.text_field :perito_contable_telefono %>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-2 col-xs-5">
+      <%= f.label :perito_contable_incapacidad , '% Incapac' %>
+    </div>
+
+    <div class="col-md-2 col-xs-7">
+      <%= f.text_field :perito_contable_incapacidad, :size => '2' %> (esto suena raro)
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-1 col-xs-5">&nbsp;
+    </div>
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-2 col-xs-5">
+      <%= f.label :indenmizacion, 'Indemnización' %>
+    </div>
+
+    <div class="col-md-2 col-xs-7">
+      <%= f.text_field :indenmizacion, :size => '10' %>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+
+
+    <div class="col-md-1"></div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-2 col-xs-5">
+      <%= f.label :ibm, 'IBM' %>
+    </div>
+
+    <div class="col-md-2 col-xs-7">
+      <%= f.text_field :ibm, :size => '10' %>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-1 col-xs-5">
+    </div>
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+  </div>
+
+</div>
+
+
+
+<div class="actions">
+  <%= f.submit 'Crear'  %>
+</div>
+
+
+<div>
+
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <table class="table">
+          <tr>
+            <td>
+              <br />
+            </td>
+
+            <td>
+              <div class="field">
+              </div>
+              <div class="field">
+              </div>
+              <div class="field">
+              </div>
+              <div class="field">
+              </div>
+              <div class="field">
+              </div>
+              <div class="field">
+              </div>
+              <div class="field">
+              </div>
+              <div class="field">
+              </div>
+              <div class="field">
+              </div>
+              <div class="field">
+              </div>
+              <div class="field">
+              </div>
+              <div class="field">
+              </div>
+              <div class="field">
+              </div>
+              <div class="field">
+              </div>
+              <div class="field">
+              </div>
+              <div class="field">
+              </div>
+              <div class="field">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                          </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
 <% end %>

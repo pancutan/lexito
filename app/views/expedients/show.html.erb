@@ -1,14 +1,109 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Número:</strong>
+  <strong>Numero:</strong>
   <%= @expedient.numero %>
 </p>
 
 <p>
-  <strong>Carátula:</strong>
+  <strong>Caratula:</strong>
   <%= @expedient.caratula %>
 </p>
 
-<%= link_to 'Editar', edit_expedient_path(@expedient) %> |
-<%= link_to 'Volver', expedients_path %>
+<p>
+  <strong>Actor:</strong>
+  <%= @expedient.actor %>
+</p>
+
+<p>
+  <strong>Demandado:</strong>
+  <%= @expedient.demandado %>
+</p>
+
+<p>
+  <strong>Abogado:</strong>
+  <%= @expedient.abogado %>
+</p>
+
+<p>
+  <strong>Telefono abogado:</strong>
+  <%= @expedient.telefono_abogado %>
+</p>
+
+<p>
+  <strong>Email abogado:</strong>
+  <%= @expedient.email_abogado %>
+</p>
+
+<p>
+  <strong>Perito medico:</strong>
+  <%= @expedient.perito_medico %>
+</p>
+
+<p>
+  <strong>Perito medico email:</strong>
+  <%= @expedient.perito_medico_email %>
+</p>
+
+<p>
+  <strong>Perito medico telefono:</strong>
+  <%= @expedient.perito_medico_telefono %>
+</p>
+
+<p>
+  <strong>Perito medico incapacidad:</strong>
+  <%= @expedient.perito_medico_incapacidad %>
+</p>
+
+<p>
+  <strong>Perito psicologico:</strong>
+  <%= @expedient.perito_psicologico %>
+</p>
+
+<p>
+  <strong>Perito psicologico email:</strong>
+  <%= @expedient.perito_psicologico_email %>
+</p>
+
+<p>
+  <strong>Perito psicologico telefono:</strong>
+  <%= @expedient.perito_psicologico_telefono %>
+</p>
+
+<p>
+  <strong>Perito psicologico incapacidad:</strong>
+  <%= @expedient.perito_psicologico_incapacidad %>
+</p>
+
+<p>
+  <strong>Perito contable:</strong>
+  <%= @expedient.perito_contable %>
+</p>
+
+<p>
+  <strong>Perito contable email:</strong>
+  <%= @expedient.perito_contable_email %>
+</p>
+
+<p>
+  <strong>Perito contable telefono:</strong>
+  <%= @expedient.perito_contable_telefono %>
+</p>
+
+<p>
+  <strong>Perito contable incapacidad:</strong>
+  <%= @expedient.perito_contable_incapacidad %>
+</p>
+
+<p>
+  <strong>Ibm:</strong>
+  <%= @expedient.ibm %>
+</p>
+
+<p>
+  <strong>Indenmizacion:</strong>
+  <%= @expedient.indenmizacion %>
+</p>
+
+<%= link_to 'Edit', edit_expedient_path(@expedient) %> |
+<%= link_to 'Back', expedients_path %>

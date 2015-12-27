@@ -3,7 +3,45 @@
 one:
   numero: 1
   caratula: MyString
+  actor: MyString
+  demandado: MyString
+  abogado: MyString
+  telefono_abogado: MyString
+  email_abogado: MyString
+  perito_medico: MyString
+  perito_medico_email: MyString
+  perito_medico_telefono: MyString
+  perito_medico_incapacidad: 1
+  perito_psicologico: MyString
+  perito_psicologico_email: MyString
+  perito_psicologico_telefono: MyString
+  perito_psicologico_incapacidad: 1
+  perito_contable: MyString
+  perito_contable_email: MyString
+  perito_contable_telefono: MyString
+  perito_contable_incapacidad: 1
+  ibm: 1
+  indenmizacion: 1
 
 two:
   numero: 1
   caratula: MyString
+  actor: MyString
+  demandado: MyString
+  abogado: MyString
+  telefono_abogado: MyString
+  email_abogado: MyString
+  perito_medico: MyString
+  perito_medico_email: MyString
+  perito_medico_telefono: MyString
+  perito_medico_incapacidad: 1
+  perito_psicologico: MyString
+  perito_psicologico_email: MyString
+  perito_psicologico_telefono: MyString
+  perito_psicologico_incapacidad: 1
+  perito_contable: MyString
+  perito_contable_email: MyString
+  perito_contable_telefono: MyString
+  perito_contable_incapacidad: 1
+  ibm: 1
+  indenmizacion: 1

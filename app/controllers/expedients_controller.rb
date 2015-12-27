@@ -28,7 +28,7 @@ class ExpedientsController < ApplicationController
 
     respond_to do |format|
       if @expedient.save
-        format.html { redirect_to @expedient, notice: 'Expediente creado correctamente.' }
+        format.html { redirect_to @expedient, notice: 'Expedient was successfully created.' }
         format.json { render :show, status: :created, location: @expedient }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ExpedientsController < ApplicationController
   def update
     respond_to do |format|
       if @expedient.update(expedient_params)
-        format.html { redirect_to @expedient, notice: 'Expediente modificado.' }
+        format.html { redirect_to @expedient, notice: 'Expedient was successfully updated.' }
         format.json { render :show, status: :ok, location: @expedient }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class ExpedientsController < ApplicationController
   def destroy
     @expedient.destroy
     respond_to do |format|
-      format.html { redirect_to expedients_url, notice: 'Expediente borrado.' }
+      format.html { redirect_to expedients_url, notice: 'Expedient was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class ExpedientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def expedient_params
-      params.require(:expedient).permit(:numero, :caratula)
+      params.require(:expedient).permit(:numero, :caratula, :actor, :demandado, :abogado, :telefono_abogado, :email_abogado, :perito_medico, :perito_medico_email, :perito_medico_telefono, :perito_medico_incapacidad, :perito_psicologico, :perito_psicologico_email, :perito_psicologico_telefono, :perito_psicologico_incapacidad, :perito_contable, :perito_contable_email, :perito_contable_telefono, :perito_contable_incapacidad, :ibm, :indenmizacion)
     end
 end

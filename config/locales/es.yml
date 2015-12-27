@@ -1,4 +1,8 @@
 es:
+  helpers:
+    submit:
+      create: "Crear"
+      update: "Confirma cambios?"
   activerecord:
     errors:
       models:
