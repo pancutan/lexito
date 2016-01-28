@@ -5,6 +5,8 @@ es:
       update: "Confirma cambios?"
   activerecord:
     errors:
+      messages:
+        record_invalid: "Filas invalidas"
       models:
         user:
           attributes:
@@ -12,6 +14,8 @@ es:
               too_short: " - Contraseña muy corta"
             current_password:
               blank: " - Debe suministrar un password"
+            password_confirmation:
+              confirmation: "No conciden los password suministrados"
         expedient:
           attributes:
             demandado:
