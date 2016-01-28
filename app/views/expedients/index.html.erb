@@ -2,9 +2,8 @@
 
 <%= link_to '[:: Nuevo expediente ::]', new_expedient_path %>
 
-<h1>Expedientes</h1>
+<h3>Expedientes</h3>
 
-<h3>Users</h3>
 <div class="table-responsive">
 <%#<div class="container">%>
   <%#<div class="row">%>
@@ -28,8 +27,10 @@
           <td><%= expedient.caratula %></td>
           <%#<td><%= expedient.actor %></td>
           <%#<td><%= expedient.demandado %></td>
-          <td><%= link_to 'Edit', edit_expedient_path(expedient) %></td>
-          <td><%= link_to 'Destroy', expedient, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
+          <td>
+            [:: <%= link_to 'Actualizar', edit_expedient_path(expedient) %> |
+            <%= link_to ' Borrar', expedient, method: :delete, data: { confirm: 'Esta seguro?' } %> ::]
+          </td>
         </tr>
       <% end %>
         </tbody>

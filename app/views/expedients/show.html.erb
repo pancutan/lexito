@@ -10,6 +10,7 @@
   <%= @expedient.updated_at  %>
 </p>
 
+<p>--------------</p>
 
 <p>
   <strong>Numero:</strong>
@@ -25,6 +26,8 @@
   <strong>Actor:</strong>
   <%= @expedient.actor %>
 </p>
+
+<p>--------------</p>
 
 <p>
   <strong>Demandado:</strong>
@@ -46,6 +49,8 @@
   <%= @expedient.email_abogado %>
 </p>
 
+<p>--------------</p>
+
 <p>
   <strong>Perito medico:</strong>
   <%= @expedient.perito_medico %>
@@ -65,6 +70,8 @@
   <strong>Perito medico incapacidad:</strong>
   <%= @expedient.perito_medico_incapacidad %>
 </p>
+
+<p>--------------</p>
 
 <p>
   <strong>Perito psicologico:</strong>
@@ -86,6 +93,8 @@
   <%= @expedient.perito_psicologico_incapacidad %>
 </p>
 
+<p>--------------</p>
+
 <p>
   <strong>Perito contable:</strong>
   <%= @expedient.perito_contable %>
@@ -106,6 +115,8 @@
   <%= @expedient.perito_contable_incapacidad %>
 </p>
 
+<p>--------------</p>
+
 <p>
   <strong>Ibm:</strong>
   <%= @expedient.ibm %>
@@ -116,5 +127,50 @@
   <%= @expedient.indenmizacion %>
 </p>
 
+
+<p>--------------</p>
+
+
+<div class="row">
+  <div class="col-md-5 col-xs-5">
+    <strong>Novedad</strong>
+  </div>
+
+  <div class="col-md-3 col-xs-7">
+    <strong>Actualizada</strong>
+  </div>
+
+  <div class="clearfix visible-sm"></div>
+
+  <div class="col-md-2 col-xs-5">
+  </div>
+
+  <div class="col-md-5 col-xs-7">
+  </div>
+</div>
+
+<% @updates.each do |update| %>
+  <div class="row">
+    <div class="col-md-5 col-xs-5">
+      <%= update.novedad %>
+    </div>
+
+    <div class="col-md-2 col-xs-7">
+      <%= update.updated_at %>
+    </div>
+
+    <div class="clearfix visible-sm"></div>
+
+    <div class="col-md-3 col-xs-5">
+    </div>
+
+    <div class="col-md-5 col-xs-7">
+    </div>
+  </div>
+<% end %>
+
+    <p>--------------</p>
+
+<br />
 <%= link_to 'Editar', edit_expedient_path(@expedient) %> |
 <%= link_to 'Volver', expedients_path %>

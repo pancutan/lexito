@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Expedient:</strong>
+  <%= @update.expedient_id %>
+</p>
+
+<p>
+  <strong>Novedad:</strong>
+  <%= @update.novedad %>
+</p>
+
+<%= link_to 'Edit', edit_update_path(@update) %> |
+<%= link_to 'Back', updates_path %>

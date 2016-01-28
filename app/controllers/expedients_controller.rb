@@ -10,15 +10,20 @@ class ExpedientsController < ApplicationController
   # GET /expedients/1
   # GET /expedients/1.json
   def show
+    @update = Update.new
+    @updates = Update.where(expedient_id: @expedient.id)
   end
 
   # GET /expedients/new
   def new
     @expedient = Expedient.new
+    @new = 1
   end
 
   # GET /expedients/1/edit
   def edit
+    @update = Update.new
+    @updates = Update.where(expedient_id: @expedient.id)
   end
 
   # POST /expedients
@@ -42,7 +47,13 @@ class ExpedientsController < ApplicationController
   def update
     respond_to do |format|
       if @expedient.update(expedient_params)
-        format.html { redirect_to @expedient, notice: 'Expedient was successfully updated.' }
+        if params[:expedient][:novedad] != ""
+          @update = Update.new
+          @update.novedad = params[:expedient][:novedad]
+          @update.expedient_id = @expedient.id
+          @update.save
+        end
+        format.html { redirect_to @expedient, notice: 'El expediente fue correctamente modificado.' }
         format.json { render :show, status: :ok, location: @expedient }
       else
         format.html { render :edit }
