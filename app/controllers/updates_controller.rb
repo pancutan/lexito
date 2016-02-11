@@ -3,6 +3,7 @@ class UpdatesController < ApplicationController
 
   # GET /updates
   # GET /updates.json
+
   def index
     @updates = Update.all
   end
@@ -40,15 +41,23 @@ class UpdatesController < ApplicationController
   # PATCH/PUT /updates/1
   # PATCH/PUT /updates/1.json
   def update
-    respond_to do |format|
-      if @update.update(update_params)
-        format.html { redirect_to @update, notice: 'Update was successfully updated.' }
-        format.json { render :show, status: :ok, location: @update }
-      else
-        format.html { render :edit }
-        format.json { render json: @update.errors, status: :unprocessable_entity }
-      end
+    if @update.update(update_params)
+      redirect_to proc { edit_expedient_url(@update.expedient_id) }
     end
+    #respond_to do |format|
+    #  if @update.update(update_params)
+    ##    @expedient = Expedient.find(params[:id])
+        #format.html { redirect_to @update, notice: 'Update was successfully updated.' }        
+        #ok format.html { redirect_to @expedient, notice: 'Expediente modificado.' }        
+
+     #   redirect_to proc { edit_expedient_url(@expedient) }
+        
+     #   format.json { render :show, status: :ok, location: @update }
+     # else
+     #   format.html { render :edit }
+     #   format.json { render json: @update.errors, status: :unprocessable_entity }
+     # end
+    #end
   end
 
   # DELETE /updates/1

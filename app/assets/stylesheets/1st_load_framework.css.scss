@@ -33,9 +33,34 @@ img {
   }
 // apply styles to HTML elements
 // to make views framework-neutral
+//
+input[type=text]
+{
+    background-color: #f9f6e6;
+}
+
+input[type=number]
+{
+    background-color: #f9f6e6;
+}
+
+select
+{
+    background-color: #f9f6e6;
+}
+
+input[type=area]
+{
+    background-color: #f9f6e6;
+}
+
+textarea {
+    background-color: #f9f6e6;
+}
+
 main {
   @extend .container;
-  background-color: #eee;
+  background-color: #fafbd4;
   padding-bottom: 80px;
   width: 100%;
   margin-top: 51px; // accommodate the navbar
@@ -80,3 +105,5 @@ section {
   @extend .btn-primary;
   @extend .btn-xs;
 }
+
+

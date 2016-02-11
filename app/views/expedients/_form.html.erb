@@ -47,418 +47,279 @@
     </div>
   </div>
 
+
+
   <div class="row">
-    <div class="col-md-1 col-xs-5">
+    <div class="col-md-1">
+      &nbsp;
+    </div>
+    <div class="col-md-2">
+    </div>
+
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-2">
+    </div>
+
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-2">
+    </div>
+
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-2">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1 col-xs-1">
       <%= f.label :numero, 'Número' %>
     </div>
-    <div class="col-md-1 col-xs-7">
-      <%= f.text_field :numero, :size => '10'%>
+    <div class="col-md-2 col-xs-2">
+      <%= f.number_field :numero, :size => '10'%>
     </div>
 
-    <div class="col-md-1"></div>
-
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-1 col-xs-5">
+    <div class="col-md-1 col-xs-1">
       <%= f.label :demandado, 'Demandado' %>
     </div>
-
-    <div class="col-md-1 col-xs-7">
+    <div class="col-md-2 col-xs-2">
       <%= f.text_field :demandado, :size => '20' %>
     </div>
 
-    <div class="col-md-1"></div>
-
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-2 col-xs-5">
-    </div>
-
-    <div class="col-md-1 col-xs-7">
-    </div>
-
-  </div>
-
-  <div class="row">
-    <div class="col-md-1 col-xs-5">
-      <%= f.label :caratula, 'Carátula' %>
-    </div>
-    <div class="col-md-1 col-xs-7">
-      <%= f.text_field :caratula, :size => '20' %>
-    </div>
-
-    <div class="col-md-1"></div>
-
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-1 col-xs-5">
+    <div class="col-md-1 col-xs-1">
       <%= f.label :abogado, 'Abogado' %>
     </div>
-
-    <div class="col-md-1 col-xs-7">
+    <div class="col-md-2 col-xs-2">
       <%= f.text_field :abogado %><br>
     </div>
 
-    <div class="col-md-1"></div>
-
-    <div class="col-md-2 col-xs-5">
+    <div class="col-md-1 col-xs-1">
+      <%= f.label :perito_medico, 'Perito Médico' %>
     </div>
-
-    <div class="col-md-1 col-xs-7">
+    <div class="col-md-2 col-xs-2">
+      <%= f.text_field :perito_medico %>
     </div>
   </div>
 
-
   <div class="row">
-    <div class="col-md-1 col-xs-5">
-      <%= f.label :actor, 'Actor' %>
+    <div class="col-md-1">
+      <%= f.label :caratula, 'Carátula' %>
     </div>
-    <div class="col-md-1 col-xs-7">
-      <%= f.text_field :actor, :size => '20'  %>
+    <div class="col-md-2">
+      <%= f.text_field :caratula, :size => '20' %>
     </div>
 
-    <div class="col-md-1"></div>
+    <div class="col-md-1">
+      <u><strong>Indemnizac.</strong> </u>
+    </div>
+    <div class="col-md-2">
+      <%= f.number_field :indenmizacion, :size => '10' %>
+    </div>
 
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-1 col-xs-5">
+    <div class="col-md-1">
       <%= f.label :telefono_abogado, 'Teléfono' %>
     </div>
-
-    <div class="col-md-1 col-xs-7">
+    <div class="col-md-2">
       <%= f.text_field :telefono_abogado %><br>
     </div>
 
     <div class="col-md-1">
+      <%= f.label :perito_medico_email, 'E-mail' %>
     </div>
-
-    <div class="col-md-2 col-xs-5">
-    </div>
-
-    <div class="col-md-1 col-xs-7">
+    <div class="col-md-2">
+      <%= f.text_field :perito_medico_email %>
     </div>
   </div>
 
-
   <div class="row">
-    <div class="col-md-1 col-xs-5">
+    <div class="col-md-1">
+      <%= f.label :actor, 'Actor' %>
+    </div>
+    <div class="col-md-2">
+      <%= f.text_field :actor, :size => '20'  %>
     </div>
 
-    <div class="col-md-1 col-xs-7">
+    <div class="col-md-1">
+      <u><strong>IBM</strong> </u>
+    </div>
+    <div class="col-md-2">
+      <%= f.number_field :ibm, :size => '10' %>
     </div>
 
-    <div class="col-md-1"></div>
-
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-1 col-xs-5">
+    <div class="col-md-1">
       <%= f.label :email_abogado, 'E-mail' %>
     </div>
-
-    <div class="col-md-1 col-xs-7">
+    <div class="col-md-2">
       <%= f.text_field :email_abogado %>
     </div>
 
     <div class="col-md-1">
-    </div>
-
-    <div class="col-md-2 col-xs-5">
-    </div>
-
-    <div class="col-md-1 col-xs-7">
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-1 col-xs-4">&nbsp;
-    </div>
-
-    <div class="col-md-5 col-xs-8">
-    </div>
-
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-1 col-xs-4">
-    </div>
-
-    <div class="col-md-5 col-xs-8">
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-1 col-xs-5">
-      <%= f.label :perito_medico, 'Perito Médico' %>
-    </div>
-    <div class="col-md-1 col-xs-7">
-      <%= f.text_field :perito_medico %>
-    </div>
-
-    <div class="col-md-1"></div>
-
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-1 col-xs-5">
-      <%= f.label :perito_psicologico, 'Psicologo' %>
-    </div>
-
-    <div class="col-md-1 col-xs-7">
-      <%= f.text_field :perito_psicologico %>
-    </div>
-
-    <div class="col-md-1"></div>
-
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-2 col-xs-5">
-    </div>
-
-    <div class="col-md-1 col-xs-7">
-    </div>
-
-  </div>
-
-  <div class="row">
-    <div class="col-md-1 col-xs-5">
-      <%= f.label :perito_medico_email, 'E-mail' %>
-    </div>
-    <div class="col-md-1 col-xs-7">
-      <%= f.text_field :perito_medico_email %>
-    </div>
-
-    <div class="col-md-1"></div>
-
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-1 col-xs-5">
-      <%= f.label :perito_psicologico_email, 'E-mail' %>
-    </div>
-
-    <div class="col-md-1 col-xs-7">
-      <%= f.text_field :perito_psicologico_email %>
-    </div>
-
-    <div class="col-md-1"></div>
-
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-2 col-xs-5">
-    </div>
-
-    <div class="col-md-1 col-xs-7">
-    </div>
-
-  </div>
-
-  <div class="row">
-    <div class="col-md-1 col-xs-5">
       <%= f.label :perito_medico_telefono, 'Teléfono' %>
     </div>
-    <div class="col-md-1 col-xs-7">
+    <div class="col-md-2">
       <%= f.text_field :perito_medico_telefono %>
     </div>
-
-    <div class="col-md-1"></div>
-
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-1 col-xs-5">
-      <%= f.label :perito_psicologico_telefono, 'Teléfono' %>
-    </div>
-
-    <div class="col-md-1 col-xs-7">
-      <%= f.text_field :perito_psicologico_telefono %>
-    </div>
-
-    <div class="col-md-1"></div>
-
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-2 col-xs-5">
-    </div>
-
-    <div class="col-md-1 col-xs-7">
-    </div>
-
-  </div>
-
-  <div class="row">
-    <div class="col-md-1 col-xs-5">
-      <%= f.label :perito_medico_incapacidad, '% Incapac' %>
-    </div>
-    <div class="col-md-1 col-xs-7">
-      <%= f.text_field :perito_medico_incapacidad, :size => '2' %>
-    </div>
-
-    <div class="col-md-1"></div>
-
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-1 col-xs-5">
-      <%= f.label :perito_psicologico_incapacidad, '% Incapac' %>
-    </div>
-
-    <div class="col-md-1 col-xs-7">
-      <%= f.text_field :perito_psicologico_incapacidad, :size => '2'  %>
-    </div>
-
-    <div class="col-md-1"></div>
-
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-2 col-xs-5">
-    </div>
-
-    <div class="col-md-1 col-xs-7">
-    </div>
-
   </div>
 
 
   <div class="row">
-    <div class="col-md-1 col-xs-4">&nbsp;
+    <div class="col-md-1">
+      <%= f.label :dni, 'DNI' %>
+    </div>
+    <div class="col-md-2">
+      <%= f.text_field :dni, :size => '8' %>
     </div>
 
-    <div class="col-md-5 col-xs-8">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-2">
     </div>
 
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-1 col-xs-4">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-2">
     </div>
 
-    <div class="col-md-5 col-xs-8">
+    <div class="col-md-1">
+      <%= f.label :perito_medico_incapacidad, '% Incap' %>
+    </div>
+    <div class="col-md-2">
+      <%= f.number_field :perito_medico_incapacidad, :size => '2' %>
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-md-1">
+      <%= f.label :camara, 'Cámara' %>
+    </div>
+    <div class="col-md-2">
+      <%= f.number_field :camara %>
+    </div>
+
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-2">
+    </div>
+
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-2">
+    </div>
+
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-2">
+    </div>
+  </div>
 
   <div class="row">
-    <div class="col-md-1 col-xs-5">
+    <div class="col-md-1">
+      <%= f.label :fecnac, 'Fecha Nac' %>
+    </div>
+    <div class="col-md-3">
+      <%= f.date_select :fecnac %>
+    </div>
+
+    <div class="col-md-0">
+    </div>
+    <div class="col-md-2">
+    </div>
+
+    <div class="col-md-1">
       <%= f.label :perito_contable, 'Contable' %>
     </div>
-    <div class="col-md-1 col-xs-7">
+    <div class="col-md-2">
       <%= f.text_field :perito_contable %>
     </div>
 
-    <div class="col-md-1"></div>
-
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-1 col-xs-5">
-      <u><strong>Indemnización</strong> </u>
+    <div class="col-md-1">
+      <%= f.label :perito_psicologico, 'Psicologo' %>
     </div>
-
-    <div class="col-md-5 col-xs-7">
-      <%= f.text_field :indenmizacion, :size => '10' %>
-    </div>
-
-    <div class="col-md-1"></div>
-
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-2 col-xs-5">
-    </div>
-
-    <div class="col-md-1 col-xs-7">
+    <div class="col-md-2">
+      <%= f.text_field :perito_psicologico %>
     </div>
   </div>
 
-
   <div class="row">
-    <div class="col-md-1 col-xs-5">
-      <%= f.label :perito_contable_email, 'E-mail' %>
+    <div class="col-md-1">
+      <%= f.label :gestor, 'Gestor' %>
+    </div>
+    <div class="col-md-2">
+      <%= f.text_field :gestor %>
     </div>
 
-    <div class="col-md-1 col-xs-7">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-2">
+    </div>
+
+    <div class="col-md-1">
+      <%= f.label :perito_contable_email, 'E-mail' %>
+    </div>
+    <div class="col-md-2">
       <%= f.text_field :perito_contable_email %>
     </div>
 
-    <div class="col-md-1"></div>
-
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-1 col-xs-5">
-      <u><strong>IBM</strong> </u>
+    <div class="col-md-1">
+      <%= f.label :perito_psicologico_email, 'E-mail' %>
     </div>
-
-    <div class="col-md-5 col-xs-7">
-      <%= f.text_field :ibm, :size => '10' %>
-    </div>
-
-    <div class="col-md-1"></div>
-
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-2 col-xs-5">
-    </div>
-
-    <div class="col-md-1 col-xs-7">
+    <div class="col-md-2">
+      <%= f.text_field :perito_psicologico_email %>
     </div>
   </div>
 
-
   <div class="row">
-    <div class="col-md-1 col-xs-5">
+    <div class="col-md-1">
+      <%= f.label :responsable, 'Responsable' %>
+    </div>
+    <div class="col-md-2">
+      <%= f.text_field :responsable %>
+    </div>
+
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-2">
+    </div>
+
+    <div class="col-md-1">
       <%= f.label :perito_contable_telefono, 'Teléfono' %>
     </div>
-    <div class="col-md-1 col-xs-7">
+    <div class="col-md-2">
       <%= f.text_field :perito_contable_telefono %>
     </div>
 
-    <div class="col-md-1"></div>
-
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-1 col-xs-5">
+    <div class="col-md-1">
+      <%= f.label :perito_psicologico_telefono, 'Teléfono' %>
     </div>
-
-    <div class="col-md-5 col-xs-7">
-    </div>
-
-    <div class="col-md-1"></div>
-
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-2 col-xs-5">
-    </div>
-
-    <div class="col-md-1 col-xs-7">
+    <div class="col-md-2">
+      <%= f.text_field :perito_psicologico_telefono %>
     </div>
   </div>
-
 
   <div class="row">
-    <div class="col-md-1 col-xs-5">
-      <%= f.label :perito_contable_incapacidad , '% Incapac' %>
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-2">
     </div>
 
-    <div class="col-md-4 col-xs-7">
-      <%= f.text_field :perito_contable_incapacidad, :size => '2' %> (esto suena raro)
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-2">
     </div>
 
-    <div class="col-md-1"></div>
-
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-1 col-xs-5">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-2">
     </div>
 
-
-    <div class="col-md-5 col-xs-7">
+    <div class="col-md-1">
+      <%= f.label :perito_psicologico_incapacidad, '% Incap' %>
     </div>
-
-
-    <div class="col-md-1"></div>
-
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-2 col-xs-5">
-    </div>
-
-    <div class="col-md-2 col-xs-7">
+    <div class="col-md-2">
+      <%= f.number_field :perito_psicologico_incapacidad, :size => '2'  %>
     </div>
   </div>
-
-
 
   <div class="row">
     <div class="col-md-1 col-xs-5">&nbsp;
@@ -510,112 +371,45 @@
     </div>
 
     <div class="row">
-      <div class="col-md-3 col-xs-5">
-        <textarea cols="75" rows="4" id="novedad" name="expedient[novedad]"></textarea>
-      </div>
-
-      <div class="col-md-3 col-xs-7">
-      </div>
-
-      <div class="clearfix visible-sm"></div>
-
-      <div class="col-md-1 col-xs-5">
-      </div>
-
-      <div class="col-md-5 col-xs-7">
+      <div class="col-md-12">
+        <textarea cols="90" rows="4" id="novedad" name="expedient[novedad]"></textarea>
       </div>
     </div>
   <% end %>
 
-  <div class="row">
-    <div class="col-md-1 col-xs-5">&nbsp;
-    </div>
-
-    <div class="col-md-5 col-xs-7">
-    </div>
-
-    <div class="clearfix visible-sm"></div>
-
-    <div class="col-md-1 col-xs-5">
-    </div>
-
-    <div class="col-md-5 col-xs-7">
-    </div>
-  </div>
-
-
-
   <% if @new != 1 %>
+    <hr>
+
     <div class="row">
-      <div class="col-md-1 col-xs-5">
-        <strong>Bitácora</strong>
+      <div class="col-md-3">
+        <strong>Actualizado</strong>
       </div>
 
-      <div class="col-md-5 col-xs-7">
-      </div>
-
-      <div class="clearfix visible-sm"></div>
-
-      <div class="col-md-1 col-xs-5">
-      </div>
-
-      <div class="col-md-5 col-xs-7">
+      <div class="col-md-6">
+        <strong>Novedades</strong>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-md-1 col-xs-5">&nbsp;
-      </div>
-
-      <div class="col-md-5 col-xs-7">
-      </div>
-
-      <div class="clearfix visible-sm"></div>
-
-      <div class="col-md-1 col-xs-5">
-      </div>
-
-      <div class="col-md-5 col-xs-7">
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-5 col-xs-5">
-        <strong>Novedad</strong>
-      </div>
-
-      <div class="col-md-3 col-xs-7">
-        <strong>Actualizada</strong>
-      </div>
-
-      <div class="clearfix visible-sm"></div>
-
-      <div class="col-md-2 col-xs-5">
-      </div>
-
-      <div class="col-md-5 col-xs-7">
-      </div>
-    </div>
-
+    <% @updates = Update.where(expedient_id: @expedient.id) %>
     <% @updates.each do |update| %>
       <div class="row">
-        <div class="col-md-5 col-xs-5">
-          <%= update.novedad %>
-        </div>
+        &nbsp;
+      </div>
+      <div class="row" >
 
-        <div class="col-md-2 col-xs-7">
+        <div class="col-md-3">
           <%= update.updated_at %>
         </div>
 
-        <div class="clearfix visible-sm"></div>
+        <div class="col-md-6">
+          <%= update.novedad %>
+        </div>
 
-        <div class="col-md-3 col-xs-5">
-          [:: <%= link_to 'Corregir', edit_update_path(update) %> |
+        <div class="col-md-3">
+          [:: <%= link_to 'Corregir', edit_expedient_update_path(@expedient, update.id)%> |
           <%= link_to ' Borrar', update, method: :delete, data: { confirm: 'Are you sure?' } %> ::]
         </div>
 
-        <div class="col-md-5 col-xs-7">
-        </div>
       </div>
     <% end %>
   <% end %>

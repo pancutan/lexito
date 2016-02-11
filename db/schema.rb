@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160123214800) do
+ActiveRecord::Schema.define(version: 20160202181447) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,11 +35,15 @@ ActiveRecord::Schema.define(version: 20160123214800) do
     t.string   "perito_contable"
     t.string   "perito_contable_email"
     t.string   "perito_contable_telefono"
-    t.integer  "perito_contable_incapacidad"
     t.integer  "ibm"
     t.integer  "indenmizacion"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
+    t.string   "dni"
+    t.integer  "camara"
+    t.date     "fecnac"
+    t.string   "gestor"
+    t.string   "responsable"
   end
 
   create_table "updates", force: :cascade do |t|

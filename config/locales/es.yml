@@ -19,7 +19,7 @@ es:
         expedient:
           attributes:
             demandado:
-              blank: " - Debe suministrar algo en el campo actor"
+              blank: " - Debe suministrar algo en el campo demandado"
             actor:
               blank: " - Debe suministrar algo en el campo actor"
             numero:
@@ -33,11 +33,11 @@ es:
             numero:
               not_a_number: "Numero debe ser un valor numerico"
             perito_psicologico_incapacidad:
-              not_a_number: "La incapacidad dictaminada por el perito psicologico debe poseer un valor numerico"
+              not_a_number: "La incapacidad dictaminada por el perito psicologico debe poseer un valor numerico (al menos indicar un cero)"
             perito_medico_incapacidad:
-              not_a_number: "La incapacidad dictaminada por el perito medico debe poseer un valor numerico"
+              not_a_number: "La incapacidad dictaminada por el perito medico debe poseer un valor numerico (al menos indicar un cero)"
             perito_contable_incapacidad:
-              not_a_number: "La incapacidad dictaminada por el perito contable debe poseer un valor numerico"
+              not_a_number: "La incapacidad dictaminada por el perito contable debe poseer un valor numerico (al menos indicar un cero)"
   botonera:
     main: "Principal"
     edit: "Editar perfil"
